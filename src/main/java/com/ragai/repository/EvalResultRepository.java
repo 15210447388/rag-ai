@@ -10,7 +10,7 @@ import java.util.List;
 public interface EvalResultRepository extends JpaRepository<EvalResult, Long> {
 
     @Query("""
-            SELECT new com.jichi.ragkb.dto.EvalReport(
+            SELECT new com.ragai.dto.EvalReport(
                 d.kbId, r.evalVersion, COUNT(r), 
                 SUM(CASE WHEN r.hit = true THEN 1 ELSE 0 END),
                 AVG(CASE WHEN r.hit = true THEN 1.0 ELSE 0.0 END),

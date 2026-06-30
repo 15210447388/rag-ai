@@ -15,7 +15,7 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: validate          # 生产用 validate，不自动改表结构
+      ddl-auto: none          # 生产用 validate，不自动改表结构
     show-sql: false
     properties:
       hibernate:
